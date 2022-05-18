@@ -1,0 +1,17 @@
+:root {
+  --accent-color: #2196f3;
+  --main-color: #212121;
+  --second-color: #757575;
+  --white-color: #ffffff;
+  --button-color: #f5f4fa;
+  --main-margin: 30px;
+  --second-margin: 50px;
+  --icon-color: #afb1b8;
+  --trans-dur: 250ms;
+  --trans-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Roboto', Tahoma, sans-serif;
+  color: var(--main-color);
+}

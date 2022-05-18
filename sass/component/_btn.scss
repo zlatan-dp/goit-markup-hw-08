@@ -1,0 +1,15 @@
+.btn {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border-style: none;
+  font-family: inherit;
+  @include fonts(700, 16px, 1.88, 0.06em, null);
+
+  cursor: pointer;
+  color: var(--white-color);
+  transition: background-color var(--trans-dur) var(--trans-timing-function);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

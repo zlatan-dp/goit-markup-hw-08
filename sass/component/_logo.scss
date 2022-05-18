@@ -1,0 +1,18 @@
+.logo {
+  font-family: 'Raleway', Tahoma, sans-serif;
+  @include fonts(700, 26px, 1.19, 0.03em, null);
+
+  display: block;
+  &__accent {
+    color: var(--accent-color);
+  }
+  &--white {
+    color: var(--white-color);
+    margin-bottom: 20px;
+  }
+
+  &--black {
+    color: #000;
+    margin-right: 93px;
+  }
+}

@@ -1,0 +1,31 @@
+.work.section {
+  padding-top: 0;
+}
+
+.work__title {
+  margin-bottom: var(--second-margin);
+}
+
+.work-list {
+  display: flex;
+  &__item {
+    position: relative;
+    & + & {
+      margin-left: var(--main-margin);
+    }
+  }
+  &__cover {
+    display: inline-block;
+    @include fonts(700);
+    text-transform: uppercase;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--white-color);
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}

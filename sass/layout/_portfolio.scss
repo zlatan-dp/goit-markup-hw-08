@@ -1,0 +1,97 @@
+.portfolio-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--second-margin);
+}
+
+.portfolio-btn-item + .portfolio-btn-item {
+  margin-left: 8px;
+}
+
+.portfolio-btn {
+  background-color: var(--button-color);
+  border-style: none;
+  border-radius: 4px;
+  font-family: inherit;
+  @include fonts(500, 16px, 1.62);
+
+  cursor: pointer;
+  color: var(--main-color);
+  padding: 6px 22px;
+
+  transition: background-color var(--trans-dur) var(--trans-timing-function),
+    color var(--trans-dur) var(--trans-timing-function),
+    box-shadow var(--trans-dur) var(--trans-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.portfolio-examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--main-margin));
+  margin-bottom: calc(-1 * var(--main-margin));
+}
+
+.portfolio-examples-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: var(--main-margin);
+  margin-bottom: var(--main-margin);
+}
+.portfolio-link {
+  display: block;
+  transition: box-shadow var(--trans-dur) var(--trans-timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.examples-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.examples-cover-text {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  height: 100%;
+  transition: transform var(--trans-dur) var(--trans-timing-function);
+
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-link:hover .examples-cover-text {
+  transform: translateY(0%);
+}
+
+.portfolio-examles-content {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.portfolio-examples-name {
+  margin-bottom: 4px;
+  @include fonts(700, 18px, 2, 0.06em, null);
+
+  color: var(--main-color);
+}
+
+.portfolio-examples-type {
+  @include fonts(null, 16px, 1.88, 0.03em, null);
+
+  color: var(--second-color);
+}

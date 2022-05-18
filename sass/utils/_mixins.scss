@@ -1,0 +1,7 @@
+@mixin fonts($fw, $fs: 14px, $lh: 1.14, $ls: 0.03em, $ta: center) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-align: $ta;
+} ;

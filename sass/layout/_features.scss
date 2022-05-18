@@ -1,0 +1,31 @@
+.features-list {
+  display: flex;
+  &__item {
+    width: 270px;
+    & + & {
+      margin-left: var(--main-margin);
+    }
+  }
+
+  &__wrap {
+    width: 270px;
+    height: 120px;
+    background: var(--button-color);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--main-margin);
+  }
+
+  &__titles {
+    @include fonts(null, 14px, 1.14, 0.03em, null);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include fonts(null, 14px, 1.71, 0.03em, null);
+    color: var(--second-color);
+  }
+}
