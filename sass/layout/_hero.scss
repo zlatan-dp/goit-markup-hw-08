@@ -3,25 +3,41 @@
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/background.jpg);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 1600px;
-  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  margin: 0 auto;
   text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
-
 .hero__title {
-  width: 696px;
-  @include fonts(900, 44px, 1.36, 0.06em);
-
+  @include fonts(900, 26px, 1.62, 0.06em);
   text-transform: uppercase;
   color: var(--white-color);
+  margin-bottom: var(--main-margin);
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--main-margin);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    @include fonts(900, 44px, 1.36, 0.06em);
+  }
 }
 
 .hero__btn {
