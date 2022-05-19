@@ -110,10 +110,18 @@ img {
 .logo {
   font-family: "Raleway", Tahoma, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   display: block;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
 }
 .logo__accent {
   color: var(--accent-color);
@@ -247,7 +255,6 @@ img {
     padding-bottom: 200px;
   }
 }
-
 .hero__title {
   font-weight: 900;
   font-size: 26px;
@@ -271,7 +278,6 @@ img {
     text-align: center;
   }
 }
-
 .hero__btn {
   padding: 10px 32px;
 }
@@ -597,12 +603,44 @@ img {
   padding-bottom: 60px;
 }
 
-.footer-flex {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .footer-contacts {
-  width: 231px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-contacts {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contacts {
+    margin: 0;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+.footer-adress-wrap {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-adress-wrap {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-adress-wrap {
+    width: 231px;
+  }
 }
 
 .adress-list__item:not(:last-child) {
@@ -627,12 +665,25 @@ img {
 }
 
 .footer-join {
-  margin-left: 70px;
-  padding-top: 12px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-join {
+    margin: 0;
+    padding-top: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-join {
+    margin-left: 70px;
+    padding-top: 12px;
+  }
 }
 
 .join-list {
   display: flex;
+  justify-content: center;
 }
 
 .join-list__item + .join-list__item {
@@ -672,17 +723,27 @@ img {
 }
 
 .subscribe-modal {
-  margin-left: 93px;
   padding-top: 12px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-modal {
+    text-align: left;
+  }
 }
 
 .subscribe-form__wrap {
-  display: flex;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-form__wrap {
+    display: flex;
+  }
 }
 
 .subscribe-form__input {
-  width: 358px;
+  width: 100%;
+  margin-bottom: 20px;
   height: 50px;
   color: var(--white-color);
   font-size: 16px;
@@ -696,12 +757,26 @@ img {
 .subscribe-form__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 768px) {
+  .subscribe-form__input {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-form__input {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
 
 .subscribe-form__btn {
   display: inline-flex;
   align-items: center;
   padding: 10px 28px;
-  margin-left: 12px;
 }
 
 .subscribe-form__icon {

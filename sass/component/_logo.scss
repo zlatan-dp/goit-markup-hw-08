@@ -1,6 +1,10 @@
 .logo {
   font-family: 'Raleway', Tahoma, sans-serif;
-  @include fonts(700, 26px, 1.19, 0.03em, null);
+  @include fonts(700, 24px, 1.16, 0.03em, null);
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(700, 26px, 1.19, 0.03em, null);
+  }
 
   display: block;
   &__accent {
