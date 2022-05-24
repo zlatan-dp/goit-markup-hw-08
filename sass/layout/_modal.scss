@@ -1,6 +1,7 @@
 .backdrop {
   position: fixed;
   top: 0;
+  min-width: 370px;
   width: 100vw;
   height: 100vh;
 
@@ -15,8 +16,8 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 100%;
+  height: 609px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -27,6 +28,15 @@
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -63,10 +73,13 @@
 }
 
 .modal-title {
-  @include fonts(700, 20px, 1.15, 0.03em);
-
+  @include fonts(700, 20px, 1.5, 0.03em);
   color: var(--main-color);
   margin-bottom: 12px;
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(null, null, 1.15, null);
+  }
 }
 
 .modal-field:not(:last-child) {
@@ -141,8 +154,7 @@
 }
 
 .modal-label-policy {
-  @include fonts(null, 14px, 1.71, 0.03em, null);
-
+  @include fonts(null, 12px, 1.16, 0.03em, null);
   color: var(--second-color);
   display: flex;
   align-items: center;
@@ -156,6 +168,10 @@
 
     transition: border-color var(--trans-dur) var(--trans-timing-function),
       background-color var(--trans-dur) var(--trans-timing-function);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fonts(null, 14px, 1.71, 0.03em, null);
   }
 }
 
