@@ -1,7 +1,7 @@
 .title {
   @include fonts(null, 28px, 1.17);
 
-  @media screen and (min-width: 1200px) {
+  @include desk {
     @include fonts(null, 36px, 1.16);
   }
 }

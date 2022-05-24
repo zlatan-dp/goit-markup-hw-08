@@ -2,7 +2,7 @@
   font-family: 'Raleway', Tahoma, sans-serif;
   @include fonts(700, 24px, 1.16, 0.03em, null);
 
-  @media screen and (min-width: 1200px) {
+  @include desk {
     @include fonts(700, 26px, 1.19, 0.03em, null);
   }
 
@@ -20,13 +20,13 @@
     padding-top: 16px;
     padding-bottom: 16px;
 
-    @media screen and (min-width: 768px) {
+    @include tab {
       margin-right: 88px;
       padding-top: 24px;
       padding-bottom: 25px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
       margin-right: 93px;
     }
   }

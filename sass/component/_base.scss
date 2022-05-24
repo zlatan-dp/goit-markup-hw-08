@@ -5,25 +5,24 @@
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: 480px) {
+  @include mob {
     max-width: 480px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tab {
     max-width: 768px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desk {
     max-width: 1200px;
   }
-  // outline: 1px solid tomato;
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @include desk {
     padding-top: 94px;
     padding-bottom: 94px;
   }

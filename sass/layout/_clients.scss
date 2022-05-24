@@ -14,11 +14,11 @@
     margin-left: var(--main-margin);
     margin-bottom: var(--main-margin);
 
-    @media screen and (min-width: 768px) {
+    @include tab {
       width: calc(100% / 3 - 30px);
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desk {
       width: calc(100% / 6 - 30px);
     }
   }

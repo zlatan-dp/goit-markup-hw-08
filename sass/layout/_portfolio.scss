@@ -1,11 +1,24 @@
 .portfolio-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-bottom: var(--second-margin);
+
+  @include tab {
+    justify-content: center;
+  }
 }
 
-.portfolio-btn-item + .portfolio-btn-item {
-  margin-left: 8px;
+.portfolio-btn-item:nth-child(-n + 3) {
+  margin-bottom: 15px;
+
+  @include tab {
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-btn-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .portfolio-btn {
@@ -31,17 +44,34 @@
 }
 
 .portfolio-examples-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--main-margin));
   margin-bottom: calc(-1 * var(--main-margin));
+
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--main-margin));
+  }
 }
 
 .portfolio-examples-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: var(--main-margin);
   margin-bottom: var(--main-margin);
+
+  @include tab {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: var(--main-margin);
+  }
+
+  @include desk {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-examples-item:first-child .portfolio-examles-content {
+    padding-bottom: 56px;
+  }
+}
+
 .portfolio-link {
   display: block;
   transition: box-shadow var(--trans-dur) var(--trans-timing-function);
@@ -60,7 +90,7 @@
 .examples-cover-text {
   position: absolute;
   top: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   height: 100%;
   transition: transform var(--trans-dur) var(--trans-timing-function);
 
@@ -81,6 +111,9 @@
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
 
 .portfolio-examples-name {
