@@ -4,7 +4,11 @@
 }
 
 .team__title {
-  margin-bottom: var(--second-margin);
+  margin-bottom: var(--main-margin);
+
+  @include desk {
+    margin-bottom: var(--second-margin);
+  }
 }
 
 .team-list {
